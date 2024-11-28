@@ -43,11 +43,11 @@ export const App: React.FC = () => {
 
   // COUNT TODOs
   const activeTodoCount = useMemo(() => {
-    return [...todos].filter(todo => !todo.completed).length;
+    return todos.filter(todo => !todo.completed).length;
   }, [todos]);
 
   const completedTodoCount = useMemo(() => {
-    return [...todos].filter(todo => todo.completed).length;
+    return todos.filter(todo => todo.completed).length;
   }, [todos]);
 
   // INITIAL CHECK FOR USER ID REGISTRATION
