@@ -32,8 +32,6 @@ export const ErrorNotification: React.FC<Props> = ({
   }, [errorMessage]);
 
   return (
-    // DON'T use conditional rendering to hide the notification
-    // Add the 'hidden' class to hide the message smoothly
     <div
       data-cy="ErrorNotification"
       // eslint-disable-next-line max-len
@@ -46,6 +44,7 @@ export const ErrorNotification: React.FC<Props> = ({
         className="delete"
         onClick={hideErrorNotice}
       />
+      {/* Below comments will be removed once 'Error Notification' logic is fully implemented */}
       {/* show only one message at a time */}
       {errorMessage}
       {/* Unable to load todos */}
